@@ -101,7 +101,7 @@ $(document).ready(function () {
 		}
 		osapi.jive.core.users.get({id: '@viewer'}).execute(function(response) 
 		{
-		console.log("Load response is " + JSON.stringify(response));
+		//console.log("Load response is " + JSON.stringify(response));
 			if (!response.error) 
 			{
 				var jiveUser = response.data;
@@ -124,8 +124,8 @@ $(document).ready(function () {
 			  'params' : { 'SWEExtData' : xmlInput } // Jive Connects will URI encode values for you
 			}).execute(function(response) 
 			{
-			console.log("Execute Response is " + JSON.stringify(response));
-			console.log("Execute xmlInput is " + xmlInput);
+			//console.log("Execute Response is " + JSON.stringify(response));
+			//console.log("Execute xmlInput is " + xmlInput);
 			
 			if (!response.error) 
 				{
