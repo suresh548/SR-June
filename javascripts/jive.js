@@ -940,6 +940,7 @@ $(document).ready(function () {
 
 	//Login Form
 	$('#loginSiebel').live('click', function(){
+	    alert("logining...");
 		SiebelUser = $('#uname').val();
 		SiebelPassword = $('#pword').val(); //this needs to be encrypted
 		if (SiebelUser == "" || SiebelPassword == "")
@@ -950,6 +951,7 @@ $(document).ready(function () {
 		}
 		else
 		{
+		 alert("logining...else");
 			var prefs = new gadgets.Prefs();
 			showLoading();
 			yourSiebelUser = prefs.getString("UserName"); 
