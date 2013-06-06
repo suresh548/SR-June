@@ -238,7 +238,7 @@ $(document).ready(function () {
 									}											
 							});		
 						console.log("before append row: "+row);
-							$("div#xmlTable1 div#results").append(row);
+							$("div#xmlTable div#results").append(row);
 							hideLoading();
 							$('#HomeView').show();
 							$('#LoginScreen').hide();
@@ -248,7 +248,7 @@ $(document).ready(function () {
 						catch (err) 
 						{
 						console.log("catch (err) row: "+row);
-							$("div#xmlTable1 div#results").append('<ul align="center"><li >Unable to fetch records now.</li></ul>');
+							$("div#xmlTable div#results").append('<ul align="center"><li >Unable to fetch records now.</li></ul>');
 							//document.getElementById("hrefCreateOpp").style.display = "none";
 							//document.getElementById("pager").style.display = "none";
 							$('#HomeView').show();
@@ -267,7 +267,7 @@ $(document).ready(function () {
 					}
 					else
 					{
-						$("div#xmlTable1 div#results").append('<ul align="center"><li >Unable to fetch records now. Error:'+response.error.message+'</li></ul>');
+						$("div#xmlTable div#results").append('<ul align="center"><li >Unable to fetch records now. Error:'+response.error.message+'</li></ul>');
 						//document.getElementById("hrefCreateOpp").style.display = "none";
 						//document.getElementById("pager").style.display = "none";
 						$('#HomeView').show();
@@ -283,7 +283,7 @@ $(document).ready(function () {
 			}
 			else
 			{
-				$("div#xmlTable1 div#results").append('<ul align="center"><li colspan="9">Unable to fetch records now. Error:'+response.error.message+'</li></ul>');
+				$("div#xmlTable div#results").append('<ul align="center"><li colspan="9">Unable to fetch records now. Error:'+response.error.message+'</li></ul>');
 				//document.getElementById("hrefCreateOpp").style.display = "none";
 				//document.getElementById("pager").style.display = "none";
 				$('#HomeView').show();
