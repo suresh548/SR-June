@@ -240,7 +240,8 @@ $(document).ready(function () {
 						console.log("before append row: "+row);
 							$("div#xmlTable div#results").append(row);
 							hideLoading();
-							$('#HomeView').show();
+							//$('#HomeView').show();
+							$('#canvas').show();
 							$('#LoginScreen').hide();
 							$('#uname').val('');
 							$('#pword').val('');						
@@ -940,7 +941,6 @@ $(document).ready(function () {
 
 	//Login Form
 	$('#loginSiebel').live('click', function(){
-	    alert("logining...");
 		SiebelUser = $('#uname').val();
 		SiebelPassword = $('#pword').val(); //this needs to be encrypted
 		if (SiebelUser == "" || SiebelPassword == "")
@@ -951,7 +951,6 @@ $(document).ready(function () {
 		}
 		else
 		{
-		 alert("logining...else");
 			var prefs = new gadgets.Prefs();
 			showLoading();
 			yourSiebelUser = prefs.getString("UserName"); 
