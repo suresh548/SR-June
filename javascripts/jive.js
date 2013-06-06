@@ -143,6 +143,7 @@ $(document).ready(function () {
 							var j=0;
 							$returnSR.each(function () 
 							{
+							console.log("Intialized row: "+row);
 									if(j<7)
 									{
 										optyName = ($(this).children('Name').text());
@@ -232,10 +233,11 @@ $(document).ready(function () {
 										row = row + 
 												'<ul class="eachRow">' +opptyName+accountOp+
 												 infOppty + prob + upDate + age + priority + opDisc + refer +'</ul>';
+												 console.log("row: "+row);
 										j++;
 									}											
 							});		
-						
+						console.log("before append row: "+row);
 							$("div#xmlTable1 div#results").append(row);
 							hideLoading();
 							$('#HomeView').show();
@@ -245,6 +247,7 @@ $(document).ready(function () {
 						} 
 						catch (err) 
 						{
+						console.log("catch (err) row: "+row);
 							$("div#xmlTable1 div#results").append('<ul align="center"><li >Unable to fetch records now.</li></ul>');
 							//document.getElementById("hrefCreateOpp").style.display = "none";
 							//document.getElementById("pager").style.display = "none";
