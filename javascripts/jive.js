@@ -61,6 +61,7 @@ $(document).ready(function () {
  	function init() {
 		registerEvents();
 		viewer = opensocial.data.getDataContext().getDataSet('viewer');
+		INITIALIZED = 1;
 		
 	};
 
@@ -100,6 +101,7 @@ $(document).ready(function () {
 		}
 		osapi.jive.core.users.get({id: '@viewer'}).execute(function(response) 
 		{
+		console.log("Load response is " + JSON.stringify(response));
 			if (!response.error) 
 			{
 				var jiveUser = response.data;
