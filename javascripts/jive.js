@@ -241,7 +241,8 @@ $(document).ready(function () {
 							$("div#xmlTable div#results").append(row);
 							hideLoading();
 							//$('#HomeView').show();
-							$('#canvas').show();
+							$('#xmlTable').show();
+							
 							$('#LoginScreen').hide();
 							$('#uname').val('');
 							$('#pword').val('');						
