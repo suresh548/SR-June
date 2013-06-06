@@ -242,6 +242,8 @@ $(document).ready(function () {
 							hideLoading();
 							//$('#HomeView').show();
 							$('#xmlTable').show();
+							$('#myBanner').show();
+							$('#myMenu').show();
 							
 							$('#LoginScreen').hide();
 							$('#uname').val('');
