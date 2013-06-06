@@ -19,7 +19,6 @@
 	}
 function showLoading() 
 	{
-	alert("show loading");
 		//console.log("inside show loading");
 		$("#loadMask").mask("Please Wait...");
 	}
@@ -94,7 +93,6 @@ $(document).ready(function () {
 	init();
 		function loadTheRecords() 
 	{
-	showLoading();
 		console.log("In Loadtherecords HOME.JS");
 		var xmlDoc = '';
 		
@@ -950,7 +948,7 @@ $(document).ready(function () {
 			var prefs = new gadgets.Prefs();
 			showLoading();
 			yourSiebelUser = prefs.getString("UserName"); 
-			console.log("Your Old Siebel User name: "+yourSiebelUser);		
+			//console.log("Your Old Siebel User name: "+yourSiebelUser);		
 			prefs.set("UserName",SiebelUser);
 			var encPass= encryptPassword(SiebelPassword); //Encrypting the password
 			prefs.set("Password",encPass); //Saving the encrypted password to user prefs
