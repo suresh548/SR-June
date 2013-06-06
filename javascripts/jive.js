@@ -58,11 +58,9 @@ $(document).ready(function () {
 	var viewer;
 	var srNumberRefer = "";
 	var INITIALIZED = 0;
-	
  	function init() {
 		registerEvents();
 		viewer = opensocial.data.getDataContext().getDataSet('viewer');
-		INITIALIZED = 1;
 		
 	};
 
@@ -934,7 +932,6 @@ $(document).ready(function () {
 
 	//Login Form
 	$('#loginSiebel').live('click', function(){
-	    INITIALIZED = 0;
 		SiebelUser = $('#uname').val();
 		SiebelPassword = $('#pword').val(); //this needs to be encrypted
 		if (SiebelUser == "" || SiebelPassword == "")
