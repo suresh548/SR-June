@@ -246,7 +246,7 @@ $(document).ready(function () {
 			var encPass= encryptPassword(SiebelPassword); //Encrypting the password
 			prefs.set("Password",encPass); //Saving the encrypted password to user prefs
 			document.getElementById('userID').innerHTML = yourSiebelUser; 
-			//$('#userID').text(yourSiebelUser);
+			$('#userID').text(yourSiebelUser);
 							hideLoading();
 							//$('#HomeView').show();
 							//$('#xmlTable').show();
