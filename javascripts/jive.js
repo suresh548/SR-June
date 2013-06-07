@@ -55,38 +55,9 @@ $(document).ready(function () {
 	var idUser, idUserSiebel= '';
 	var JObject=''; //For JSON
 	var totalRecords= 0;
-	
-	
-		var prefs = new gadgets.Prefs();
-	var yourSiebelUser = prefs.getString("UserName"); 
-	//console.log("Your login screen:"+yourSiebelUser);
 	var viewer;
 	var srNumberRefer = "";
-	var SiebelUser = "";
-	var SiebelPassword = "";
 	var INITIALIZED = 0;
-	
-	gadgets.util.registerOnLoadHandler(init);	
-	
-	if (yourSiebelUser == "")
-	{
-		//console.log("Your login screen:");
-		$('#LoginScreen').show();
-		document.loginForm.uname.focus();
-		//$('#HomeView').hide();
-		//$('#ReferPage').hide();	
-	}
-	else
-	{
-		var encPassword = prefs.getString("Password");
-		SiebelUser = prefs.getString("UserName");
-		SiebelPassword = decryptPassword (encPassword);
-		document.getElementById('myID').innerHTML = SiebelUser;
-		//$('#HomeView').show();
-		$('#LoginScreen').hide();
-		//$('#ReferPage').hide();
-		loadTheRecords();
-	}
  	function init() {
 		registerEvents();
 		viewer = opensocial.data.getDataContext().getDataSet('viewer');
