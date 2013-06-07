@@ -240,10 +240,10 @@ $(document).ready(function () {
 						console.log("before append row: "+row);
 							$("div#xmlTable div#results").append(row);
 							hideLoading();
-							//$('#HomeView').show();
-							$('#xmlTable').show();
-							$('#myBanner').show();
-							$('#myMenu').show();
+							$('#canvas').show();
+							//$('#xmlTable').show();
+							//$('#myBanner').show();
+							//$('#myMenu').show();
 							window.location.reload();
 							
 							$('#LoginScreen').hide();
