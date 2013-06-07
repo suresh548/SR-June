@@ -132,11 +132,12 @@ $(document).ready(function () {
 			var prefs = new gadgets.Prefs();
 			showLoading();
 			yourSiebelUser = prefs.getString("UserName"); 
-			//console.log("Your Old Siebel User name: "+yourSiebelUser);		
+			console.log("Your Old Siebel User name: "+yourSiebelUser);		
 			prefs.set("UserName",SiebelUser);
 			var encPass= encryptPassword(SiebelPassword); //Encrypting the password
 			prefs.set("Password",encPass); //Saving the encrypted password to user prefs
-			document.getElementById('userID').innerHTML = SiebelUser; 
+			//document.getElementById('userID').innerHTML = SiebelUser; 
+			$('#userID').text(SiebelUser);
 						xmlDoc = response.content;
 						try 
 						{
