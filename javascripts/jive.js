@@ -126,12 +126,17 @@ $(document).ready(function () {
 			{
 			//console.log("Execute Response is " + JSON.stringify(response));
 			//console.log("Execute xmlInput is " + xmlInput);
-			var jiveUser = response.data;
+			
 			if (!response.error) 
 				{
-					idUser = jiveUser.username;
-		            $('#userID').text(jiveUser.name);
-		            idUserSiebel='JIVEUSER';
+			var prefs = new gadgets.Prefs();
+			showLoading();
+			yourSiebelUser = prefs.getString("UserName"); 
+			//console.log("Your Old Siebel User name: "+yourSiebelUser);		
+			prefs.set("UserName",SiebelUser);
+			var encPass= encryptPassword(SiebelPassword); //Encrypting the password
+			prefs.set("Password",encPass); //Saving the encrypted password to user prefs
+			document.getElementById('userID').innerHTML = SiebelUser; 
 						xmlDoc = response.content;
 						try 
 						{
