@@ -47,10 +47,6 @@ function decryptPassword(pString)
 		return dString;
 	}
 $(document).ready(function () {
-    var loginUser="";
-				var prefs = new gadgets.Prefs();
-			 loginUser = prefs.getString("UserName"); 
-			console.log("Your Old Siebel User name: "+loginUser);	
 	//Get the list of SRs assigned to the current user
 	var xmlDoc = ''; //XML String used for Parsing and like.
 	var srNoDisc = ''; //SR Number used for Discussions.
@@ -241,11 +237,11 @@ $(document).ready(function () {
 										j++;
 									}											
 							});		
-						console.log("before append row: "+row);
+						     
 							$("div#xmlTable div#results").append(row);
-			var prefs = new gadgets.Prefs();
-			 loginUser = prefs.getString("UserName"); 
-			console.log("Your Old Siebel User name: "+loginUser);	
+			//var prefs = new gadgets.Prefs();
+			//var yourSiebelUser = prefs.getString("UserName"); 
+			//console.log("Your Old Siebel User name: "+yourSiebelUser);	
 			//$('#userID span').text(yourSiebelUser);
 							hideLoading();
 							//$('#HomeView').show();
@@ -337,11 +333,7 @@ $(document).ready(function () {
 		var jiveUser = response.data;
 		if (!response.error) {
 		idUser = jiveUser.username;
-					var prefs = new gadgets.Prefs();
-			 loginUser = prefs.getString("UserName"); 
-			console.log("login user at viewer: "+loginUser);	
-		console.log("loginUser: "+loginUser);	
-		$('#userID').text(loginUser);
+		$('#userID').text(jiveUser.name);
 		idUserSiebel='JIVEUSER';//idUser.toUpperCase(); //Siebel currently allows only names in uppercase!
 		var xmlInput = '<?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tro="http://siebel.com/TroubleTicket" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"><soapenv:Header/><soapenv:Body><tro:GetTroubleTicket soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><SiebelMessage xsi:type="ws:ListOfWsTroubleTicketInterfaceTopElmt" xmlns:ws="http://www.siebel.com/xml/WS Trouble Ticket"><ListOfWsTroubleTicketInterface xsi:type="ws:ListOfWsTroubleTicketInterface"><TroubleTicket xsi:type="ws:ArrayOfTroubleTicket" soapenc:arrayType="ws:TroubleTicket[]"/><ws:TroubleTicket><ws:Owner>'+idUserSiebel+'</ws:Owner><ws:Status>Open</ws:Status></ws:TroubleTicket></ListOfWsTroubleTicketInterface></SiebelMessage></tro:GetTroubleTicket></soapenv:Body></soapenv:Envelope>'; // Normal XML text, not URI encoded
 		osapi.jive.connects.get({
