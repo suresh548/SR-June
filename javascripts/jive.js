@@ -244,6 +244,7 @@ $(document).ready(function () {
 							$('#xmlTable').show();
 							$('#myBanner').show();
 							$('#myMenu').show();
+							window.location.reload();
 							
 							$('#LoginScreen').hide();
 							$('#uname').val('');
