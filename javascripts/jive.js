@@ -240,7 +240,7 @@ $(document).ready(function () {
 						console.log("before append row: "+row);
 							$("div#xmlTable div#results").append(row);
 							hideLoading();
-							$('#canvas').show();
+							//$('#HomeView').show();
 							//$('#xmlTable').show();
 							//$('#myBanner').show();
 							//$('#myMenu').show();
