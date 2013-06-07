@@ -242,7 +242,7 @@ $(document).ready(function () {
 							var prefs = new gadgets.Prefs();
 			var yourSiebelUser = prefs.getString("UserName"); 
 			console.log("Your Old Siebel User name: "+yourSiebelUser);	
-			$('#userID').text(yourSiebelUser);
+			$('#userID span').text(yourSiebelUser);
 							hideLoading();
 							//$('#HomeView').show();
 							//$('#xmlTable').show();
