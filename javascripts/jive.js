@@ -1,4 +1,3 @@
-	var loginUser="";
 	//cssdropdown.startchrome("chromemenu");
 	function encryptPassword(pString) 
 	{
@@ -47,7 +46,11 @@ function decryptPassword(pString)
 		}
 		return dString;
 	}
-$(document).ready(function () {    
+$(document).ready(function () {
+    var loginUser="";
+				var prefs = new gadgets.Prefs();
+			 loginUser = prefs.getString("UserName"); 
+			console.log("Your Old Siebel User name: "+loginUser);	
 	//Get the list of SRs assigned to the current user
 	var xmlDoc = ''; //XML String used for Parsing and like.
 	var srNoDisc = ''; //SR Number used for Discussions.
@@ -334,6 +337,9 @@ $(document).ready(function () {
 		var jiveUser = response.data;
 		if (!response.error) {
 		idUser = jiveUser.username;
+					var prefs = new gadgets.Prefs();
+			 loginUser = prefs.getString("UserName"); 
+			console.log("login user at viewer: "+loginUser);	
 		console.log("loginUser: "+loginUser);	
 		$('#userID').text(loginUser);
 		idUserSiebel='JIVEUSER';//idUser.toUpperCase(); //Siebel currently allows only names in uppercase!
