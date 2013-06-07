@@ -47,6 +47,8 @@ function decryptPassword(pString)
 		return dString;
 	}
 $(document).ready(function () {
+
+    var SiebelUser='';
 	//Get the list of SRs assigned to the current user
 	var xmlDoc = ''; //XML String used for Parsing and like.
 	var srNoDisc = ''; //SR Number used for Discussions.
