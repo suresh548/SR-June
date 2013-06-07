@@ -129,16 +129,7 @@ $(document).ready(function () {
 			
 			if (!response.error) 
 				{
-			var prefs = new gadgets.Prefs();
-			showLoading();
-			yourSiebelUser = prefs.getString("UserName"); 
-			console.log("Your Old Siebel User name: "+yourSiebelUser);		
-			prefs.set("UserName",SiebelUser);
-			var encPass= encryptPassword(SiebelPassword); //Encrypting the password
-			prefs.set("Password",encPass); //Saving the encrypted password to user prefs
-			//document.getElementById('userID').innerHTML = SiebelUser; 
-			$('#userID').text(SiebelUser);
-						xmlDoc = response.content;
+				xmlDoc = response.content;
 						try 
 						{
 							var myXML = xmlDoc;
@@ -248,6 +239,14 @@ $(document).ready(function () {
 							});		
 						console.log("before append row: "+row);
 							$("div#xmlTable div#results").append(row);
+							var prefs = new gadgets.Prefs();
+			var yourSiebelUser = prefs.getString("UserName"); 
+			console.log("Your Old Siebel User name: "+yourSiebelUser);		
+			prefs.set("UserName",SiebelUser);
+			var encPass= encryptPassword(SiebelPassword); //Encrypting the password
+			prefs.set("Password",encPass); //Saving the encrypted password to user prefs
+			//document.getElementById('userID').innerHTML = SiebelUser; 
+			$('#userID').text(SiebelUser);
 							hideLoading();
 							//$('#HomeView').show();
 							//$('#xmlTable').show();
