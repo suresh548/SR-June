@@ -239,10 +239,10 @@ $(document).ready(function () {
 							});		
 						console.log("before append row: "+row);
 							$("div#xmlTable div#results").append(row);
-							var prefs = new gadgets.Prefs();
-			var yourSiebelUser = prefs.getString("UserName"); 
-			console.log("Your Old Siebel User name: "+yourSiebelUser);	
-			$('#userID span').text(yourSiebelUser);
+			//var prefs = new gadgets.Prefs();
+			//var yourSiebelUser = prefs.getString("UserName"); 
+			//console.log("Your Old Siebel User name: "+yourSiebelUser);	
+			//$('#userID span').text(yourSiebelUser);
 							hideLoading();
 							//$('#HomeView').show();
 							//$('#xmlTable').show();
