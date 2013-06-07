@@ -1,3 +1,4 @@
+	var loginUser="";
 	//cssdropdown.startchrome("chromemenu");
 	function encryptPassword(pString) 
 	{
@@ -46,8 +47,7 @@ function decryptPassword(pString)
 		}
 		return dString;
 	}
-$(document).ready(function () {
-    var loginUser="";
+$(document).ready(function () {    
 	//Get the list of SRs assigned to the current user
 	var xmlDoc = ''; //XML String used for Parsing and like.
 	var srNoDisc = ''; //SR Number used for Discussions.
