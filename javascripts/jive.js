@@ -334,10 +334,10 @@ $(document).ready(function () {
 		if (!response.error) {
 		idUser = jiveUser.username;
 		//$('#userID').text(jiveUser.name);
-		var prefs = new gadgets.Prefs();
-			var yourSiebelUser = prefs.getString("UserName"); 
-			console.log("Your Old Siebel User name: "+yourSiebelUser);	
-			$('#userID span').text(yourSiebelUser);
+		//var prefs = new gadgets.Prefs();
+			//var yourSiebelUser = prefs.getString("UserName"); 
+			console.log("Your Old Siebel User name: "+SiebelUser);	
+			$('#userID span').text(SiebelUser);
 		idUserSiebel='JIVEUSER';//idUser.toUpperCase(); //Siebel currently allows only names in uppercase!
 		var xmlInput = '<?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tro="http://siebel.com/TroubleTicket" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"><soapenv:Header/><soapenv:Body><tro:GetTroubleTicket soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><SiebelMessage xsi:type="ws:ListOfWsTroubleTicketInterfaceTopElmt" xmlns:ws="http://www.siebel.com/xml/WS Trouble Ticket"><ListOfWsTroubleTicketInterface xsi:type="ws:ListOfWsTroubleTicketInterface"><TroubleTicket xsi:type="ws:ArrayOfTroubleTicket" soapenc:arrayType="ws:TroubleTicket[]"/><ws:TroubleTicket><ws:Owner>'+idUserSiebel+'</ws:Owner><ws:Status>Open</ws:Status></ws:TroubleTicket></ListOfWsTroubleTicketInterface></SiebelMessage></tro:GetTroubleTicket></soapenv:Body></soapenv:Envelope>'; // Normal XML text, not URI encoded
 		osapi.jive.connects.get({
