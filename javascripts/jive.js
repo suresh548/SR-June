@@ -694,7 +694,9 @@ $(document).ready(function () {
 					   });
 				  }
 			});
-			//$('#discussTable').hide();
+			
+			$('#discussSR').hide();
+			$('#discussTable').hide();
 			//var row = $('table.data-grid tr').removeClass('active');
 	});
 
