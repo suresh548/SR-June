@@ -17,7 +17,17 @@
 		}
 		return eString;
 	}
- 
+function showLoading() 
+	{
+		//console.log("inside show loading");
+		$("#loadMask").mask("Please Wait...");
+	}
+
+	function hideLoading() 
+	{
+		//console.log("inside hide loading");
+		$("#loadMask").unmask();
+	}  
 	
 function decryptPassword(pString) 
 	{
@@ -37,7 +47,6 @@ function decryptPassword(pString)
 		return dString;
 	}
 $(document).ready(function () {
-
 	//Get the list of SRs assigned to the current user
 	var xmlDoc = ''; //XML String used for Parsing and like.
 	var srNoDisc = ''; //SR Number used for Discussions.
@@ -56,17 +65,6 @@ $(document).ready(function () {
 		
 	};
 
-	function showLoading() 
-	{
-		//console.log("inside show loading");
-		$("#loadMask").mask("Please Wait...");
-	}
-
-	function hideLoading() 
-	{
-		//console.log("inside hide loading");
-		$("#loadMask").unmask();
-	}
 	function registerEvents() {
 		var groupID = "@friends";
 		//console.log("Selecting people for groupID '" + groupID + "'");
