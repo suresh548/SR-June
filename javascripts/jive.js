@@ -243,7 +243,8 @@ $(document).ready(function () {
 			//var yourSiebelUser = prefs.getString("UserName"); 
 			//console.log("Your Old Siebel User name: "+yourSiebelUser);	
 			//$('#userID span').text(yourSiebelUser);
-							hideLoading();
+			showLoading();
+							//hideLoading();
 							//$('#HomeView').show();
 							//$('#xmlTable').show();
 							//$('#myBanner').show();
