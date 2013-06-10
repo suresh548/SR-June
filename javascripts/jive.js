@@ -106,7 +106,7 @@ $(document).ready(function () {
 			{
 				var jiveUser = response.data;
 				var idUser = jiveUser.username;
-				
+				showLoading();
 				//console.log("id User:"+idUser);
 				var idUserSiebel=idUser.toUpperCase(); //Siebel currently allows only names in uppercase!
 				//var idUserSiebel='PRADEEP';
@@ -243,8 +243,7 @@ $(document).ready(function () {
 			//var yourSiebelUser = prefs.getString("UserName"); 
 			//console.log("Your Old Siebel User name: "+yourSiebelUser);	
 			//$('#userID span').text(yourSiebelUser);
-			showLoading();
-							//hideLoading();
+							hideLoading();
 							//$('#HomeView').show();
 							//$('#xmlTable').show();
 							//$('#myBanner').show();
@@ -961,6 +960,7 @@ $(document).ready(function () {
 		else
 		{
 			var prefs = new gadgets.Prefs();
+			alert("show loading...");
 			showLoading();
 			yourSiebelUser = prefs.getString("UserName"); 
 			//console.log("Your Old Siebel User name: "+yourSiebelUser);		
