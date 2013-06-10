@@ -690,13 +690,15 @@ $(document).ready(function () {
 								srDiscussion= response.data.resources.html.ref;								
 								//console.log ("Discussion created successfully");
 								UpdateRecord (srNumber,"","","","","","","","",srDiscussion);
+								$('#discussSR').hide();
+			                    $('#discussTable').hide();
 							}
 					   });
 				  }
 			});
 			
-			$('#discussSR').hide();
-			$('#discussTable').hide();
+			//$('#discussSR').hide();
+			//$('#discussTable').hide();
 			//var row = $('table.data-grid tr').removeClass('active');
 	});
 
