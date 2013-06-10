@@ -176,15 +176,15 @@ $(document).ready(function () {
 										 
 										if (ddiff.search(/day/i) != -1)
 										{
-											//var age ='<li id="img3" class ="hasTooltip icons"><span>Updated '+ddiff+' ago</span></li>'; //Image for Days ago
+											var age ='<li id="img3" class ="hasTooltip icons"><span>Updated '+ddiff+' ago</span></li>'; //Image for Days ago
 										}
 										else if (ddiff.search(/hour/i) != -1)
 										{
-											//var age ='<li id="updateMins" class ="hasTooltip icons"> <span>Updated '+ddiff+' ago</span></li>'; //Image for Hours ago
+											var age ='<li id="updateMins" class ="hasTooltip icons"> <span>Updated '+ddiff+' ago</span></li>'; //Image for Hours ago
 										}
 										else
 										{
-											//var age ='<li id="updateMins" class ="hasTooltip icons"> <span>Updated '+ddiff+' ago</span></li>'; //Image for Minutes/Seconds ago
+											var age ='<li id="updateMins" class ="hasTooltip icons"> <span>Updated '+ddiff+' ago</span></li>'; //Image for Minutes/Seconds ago
 										}	
 										var infOppty = '<li id="infoSR"  class ="hasTooltip icons" > <span>Category: '+pdName+' | Revenue: '+revnue+'| Description: '+descr+' </span></li>';
 										var revn = '<li id="img6"   class ="hasTooltip icons"><span> Revenue: '+ revnue +'</span></li>';
@@ -219,15 +219,15 @@ $(document).ready(function () {
 										 
 										if (upDate.search(/day/i) != -1)
 										{
-											//upDate ='<li id="updateDays" class ="hasTooltip icons"><span>Updated '+upDate+' ago</span></li>'; //Image for Days ago
+											upDate ='<li id="updateDays" class ="hasTooltip icons"><span>Updated '+upDate+' ago</span></li>'; //Image for Days ago
 										}
 										else if (upDate.search(/hour/i) != -1)
 										{
-											//upDate ='<li id="updateMins" class ="hasTooltip icons"> <span>Updated '+upDate+' ago</span></li>'; //Image for Hours ago
+											upDate ='<li id="updateMins" class ="hasTooltip icons"> <span>Updated '+upDate+' ago</span></li>'; //Image for Hours ago
 										}
 										else
 										{
-											//upDate ='<li id="updateMins" class ="hasTooltip icons"> <span>Updated '+upDate+' ago</span></li>'; //Image for Minutes/Seconds ago
+											upDate ='<li id="updateMins" class ="hasTooltip icons"> <span>Updated '+upDate+' ago</span></li>'; //Image for Minutes/Seconds ago
 										}	
 											
 										row = row + 
@@ -381,15 +381,15 @@ $(document).ready(function () {
 						}
 						if (upDate.search(/day/i) != -1)
 						{
-							upDate ='<td class="updateDays">'+upDate+'</td>'; //Image for Days ago
+							//upDate ='<td class="updateDays">'+upDate+'</td>'; //Image for Days ago
 						}
 						else if (upDate.search(/hour/i) != -1)
 						{
-							upDate ='<td class="updateMins">'+upDate+'</td>'; //Image for Hours ago
+							//upDate ='<td class="updateMins">'+upDate+'</td>'; //Image for Hours ago
 						}
 						else
 						{
-							upDate ='<td class="updateMins">'+upDate+'</td>'; //Image for Minutes/Seconds ago
+							//upDate ='<td class="updateMins">'+upDate+'</td>'; //Image for Minutes/Seconds ago
 						}
 						if (Disc=='')
 						{
@@ -427,7 +427,7 @@ $(document).ready(function () {
 									'<td>' + Status + '</td>' +
 									'<td>' + Desc + '</td>' +
 									'<td>' + openDate + '</td>' 
-									+ upDate + Severity + srDisc + 
+									+ Severity + srDisc + 
 									'<td><a href="#" class="referSR">Refer</a> | <a href="#" class="viewSR">View</a> | <a href="#" class="editSR">Edit</a></td>' +
 									'</tr>';	
 									count++;
